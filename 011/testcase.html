@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+            .form-group input {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="color: #333;">Personal Information Form</h2>
+    <form id="personalInfoForm" action="test.php" method="post">
+        <div class="form-group">
+            <label for="firstName" style="color: #333;">First Name:</label>
+            <input type="text" id="firstName" name="firstName" minlength="5" maxlength="15" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName" style="color: #333;">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" minlength="5" maxlength="15" required>
+        </div>
+        <div class="form-group">
+            <label for="age" style="color: #333;">Age:</label>
+            <input type="number" id="age" name="age"  min="1" max="150" >
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" id = "submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
